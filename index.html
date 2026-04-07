@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The SoBo Nail Salon Colaba — Premium Nail Studio</title>
+  <style>
+    body { margin:0; font-family: Arial, sans-serif; }
+    header { position:fixed; top:0; width:100%; background:#fff; padding:15px 20px; box-shadow:0 2px 6px rgba(0,0,0,0.1); z-index:1000; }
+    .nav { display:flex; justify-content:space-between; align-items:center; }
+    .menu { display:flex; gap:20px; }
+    .menu a { text-decoration:none; color:#333; }
+    .hamburger { display:none; cursor:pointer; }
+    #mobileNav { position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); display:none; }
+    #mobileNav .menu { background:#fff; flex-direction:column; padding:20px; }
+    #hero { padding-top:100px; text-align:center; padding:120px 20px; background:#f8f8f8; }
+    section { padding:40px 20px; }
+    footer { background:#111; color:#fff; padding:20px; text-align:center; }
+    iframe { border:0; border-radius:14px; }
+
+    @media(max-width:768px) {
+      .menu { display:none; }
+      .hamburger { display:block; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div><strong>The SoBo Nail Salon Colaba</strong></div>
+    <div class="menu">
+      <a href="#hero">Home</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="hamburger" onclick="openNav()">☰</div>
+  </div>
+</header>
+
+<div id="mobileNav" onclick="closeNav()">
+  <div class="menu" onclick="event.stopPropagation()">
+    <a href="#hero" onclick="closeNav()">Home</a>
+    <a href="#contact" onclick="closeNav()">Contact</a>
+  </div>
+</div>
+
+<section id="hero">
+  <h1>Mumbai's Premier Beauty Studio</h1>
+  <p>Elevate your nail experience at The SoBo Nail Salon Colaba</p>
+  <a href="https://wa.me/919819515892">Book on WhatsApp</a>
+</section>
+
+<section id="contact">
+  <h2>Visit The SoBo Nail Salon Colaba</h2>
+  <p><strong>Phone:</strong> +91 9819515892</p>
+  <p><strong>Address:</strong> First floor, Park House Annexe, 75/77, Wodehouse Rd, Colaba, Mumbai, Maharashtra 400005</p>
+  <p><strong>Timings:</strong><br>
+  Tuesday - Monday: 11 am – 10:30 pm</p>
+
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.3699797485874!2d72.8242913!3d18.9150109!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xab1f017fc89eab03%3A0x4c8b7b1dcaf6098b!2sThe%20SoBo%20Nail%20Salon%20Colaba!5e0!3m2!1sen!2sin!4v1775561135975!5m2!1sen!2sin" width="100%" height="380" loading="lazy"></iframe>
+</section>
+
+<section>
+  <h2>Top Reviews</h2>
+  <p>★★★★★ Surbhi Saitwadekar - I recently got my nail extensions done and couldn’t be happier! Staff was warm, professional, and skilled.</p>
+  <p>★★★★★ Aishwarya Talgeri - Great experience. Mr Pradip is extremely skilled.</p>
+  <p>★★★★★ Ava Kaka - Lovely experience. Professional and hygienic.</p>
+  <p>★★★★★ Vedaant Nashikkar - Amazing service and friendly owner.</p>
+  <p>★★★★★ Isha Dube - Best place to get your nails done.</p>
+</section>
+
+<footer>
+  <p>© 2026 The SoBo Nail Salon Colaba</p>
+  <p>Phone: +91 9819515892</p>
+</footer>
+
+<script>
+function openNav() {
+  document.getElementById('mobileNav').style.display = 'block';
+}
+function closeNav() {
+  document.getElementById('mobileNav').style.display = 'none';
+}
+</script>
+
+</body>
+</html>
